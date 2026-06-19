@@ -1,11 +1,23 @@
 @import "tailwindcss";
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #fcfcfd;
+  color: #101828;
+}
+
+/* Custom fade-in reveal utility */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
